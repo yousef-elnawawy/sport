@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOE | الصفحة الرئيسية</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تعيين الخط */
+* {
+    font-family: "Changa", serif;
+    z-index: 500000;
+}
+
+:root {
+    --main: #ffbb00;
+    --bgColor: #000;
+}
+
+/* تحسين الخلفية والنص */
+body {
+    height: 100vh;
+    background-color: var(--bgColor);
+    color: white;
+    position: relative;
+}
+
+/* تحسين الـ Navbar */
+.navbar {
+    padding: 15px;
+    background-color: #000000a1;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease-in-out;
+    z-index: 800000000000;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin: 5px;
+    margin-top: 10px;
+}
+.navbar .navbar-brand img{
+    width: 200px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--main);
+    color: white !important;
+}
+
+/* تحسين السيكشن #home */
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* تحسين تأثير الجليتش */
+.text-effect {
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 0 0 10px var(--main), 
+                 0 0 20px var(--main);
+}
+@keyframes glitch {
+    0% { 
+        text-shadow: -6px 0 12px var(--main); 
+    }
+    25% {
+        text-shadow: 6px 0 12px var(--main);
+    }
+    50% { 
+        text-shadow: -8px 0 16px var(--main); 
+    }
+    75% {
+        text-shadow: 8px 0 16px var(--main);
+    }
+    100% { 
+        text-shadow: -6px 0 12px var(--main);
+    }
+}
+
+/* تحسين الأيقونات */
+#home .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 66px;
+}
+
+#home .icons i {
+    padding: 10px;
+    font-size: 36px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--main);
+}
+
+#home .icons i:hover {
+    transform: translateY(-5px);
+}
+
+#home .icons  .fa-youtube:hover{
+    color: red;
+}
+
+#home .icons  .fa-twitch:hover{
+    color: #8e45f7;
+}
+#home .icons  .fa-playstation:hover{
+    color: #0070d1;
+}
+
+#home .icons  .fa-tiktok:hover{
+    color: #af0083;
+}
+
+
+
+
+
+#home .img .main  {
+    font-size: 190px;
+    font-family: "Rubik Glitch", serif;
+    padding: 30px;
+    color: var(--main);
+    animation: glitch 3s infinite;
+}
+
+#home .txt  span , .navbar .main{
+    font-family: "Rubik Glitch", serif;
+    color: var(--main);
+    animation: glitch 3s infinite;
+}
+
+#about .txt  span{
+    font-family: "Rubik Glitch", serif;
+    color: var(--main);
+    padding: 0;
+    margin: 0;
+}
+
+
+#home .container .yousef{
+    font-size: 52px;
+}
+
+@media (max-width:1400px){
+    #home .img .main{
+        font-size: 100px;
+    } 
+    #home .yousef{
+        font-size: 30px;
+    }
+    #home .img{
+        width: 250px;
+    }
+}
+
+::selection{
+    background-color: var(--main);
+    color: white;
+}
+
+hr{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    padding: 38px;
+    color: var(--main);
+}
+
+#about {
+    position: relative;
+}
+
+#about .container .txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+}
+
+#about .container .txt img{
+    width: 320px;
+    box-shadow:  13px 0 22px #df06068c;
+}
+
+@media (min-width:1400px){
+    #about .container .txt img{
+        margin-right: 30px;
+    }
+
+    #skills .container .txt .row .box{
+        margin-right: 12px;
+    }
+
+
+    
+}
+
+@media (max-width:1400px){
+    #about .container .txt{
+
+        flex-direction: column;
+        text-align: center;
+
+
+    }
+
+    #about .container .txt .text{
+        margin-bottom: 30px;
+    }
+
+    #about::after {
+        display: none;
+    }
+
+}
+
+#about::after {
+    content: '';
+    width: 500px;  /* حجم أكبر */
+    height: 500px;
+    background-color: var(--main);
+    position: absolute;
+    border-radius: 50%;
+    top: -30%;
+    right: -180px; /* خرجها شويه برا */
+    transform: translateY(-50%);
+    z-index: -10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+}
+
+
+#about:before {
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: var(--main);
+    position: absolute;
+    bottom: -120px;
+    right: calc(10% - 500px); /* يخلي اليسار متغير بناءً على نسبة الشاشة */
+    border-radius:10px;
+    z-index: 0;
+    transform: rotate(-3deg); 
+}
+
+
+#skills{
+    position: relative;
+}
+
+#skills .container .txt{
+    text-align: center;
+    padding: 20px;
+}
+
+#skills .container .txt .row{
+    padding: 20px;
+}
+
+
+
+
+#skills .container .txt .row .box{
+    background-color: var(--main);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px #ff00008c;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 40px;
+    border: 2px solid white;
+}
+
+
+
+#skills .container .txt .row .box i{
+    font-size: 59px;
+    padding: 10px;
+}
+
+
+
+#skills .container .txt .row .box:hover{
+    transform: translateY(-20px);
+    box-shadow: 0px 0px 25px 15px #ff00008c;
+}
+
+
+#skills:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--main);
+    position: absolute;
+    clip-path: circle(15% at left 50%);
+    top: 420px;
+    z-index: 0;
+}
+
+
+#projects .container .txt {
+    text-align: center;
+    padding: 35px;
+}
+
+
+#projects .container .txt .row .box img{
+
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+}
+
+
+
+#projects .container .txt .row .box {
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow:  0px 0px 52px #5501018c;
+    margin-bottom: 25px;
+    border: 3px dotted var(--main);
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--bgColor);
+}
+
+
+#projects .container .txt .row .box .text{
+    padding: 20px;
+}
+
+
+#projects .container .txt .row .box:hover{
+    transform: scale(1.1) rotate(5deg);
+        box-shadow:  0px 0px 72px #7001018c;
+}
+
+.btn{
+    background-color: var(--main);
+    color: white;
+}
+
+.btn:hover{
+    background-color: #925f01;
+    z-index: -800000000000000000000000000000000000;
+}
+
+
+
+.big-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5000px; /* رفعها عشان تكون واضحة */
+    transform: rotate(-18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+}
+
+
+.bigo-star {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    bottom: -5800px; /* رفعها عشان تكون واضحة */
+    transform: rotate(18deg);
+    z-index: -1; /* تخليها في الخلفية */
+    pointer-events: none;
+    right:800px;
+}
+
+
+#friends .container .row .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px;
+    background-color: #ffffff60;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#friends .container .row .box img{
+    border-radius: 15px 0 0 15px;
+    max-width: 400px;
+    margin-right: 10px;
+}
+
+#friends .container .row .box h4{
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--main);
+}
+
+@media (max-width:1400px){
+    #friends .container .row .box{
+        flex-direction: column;
+        text-align: center;
+    }
+    #friends .container .row .box .text{
+        padding: 20px;
+    }
+    
+.big-star{
+    width: 300px;
+    height: 300px;
+}
+    
+.bigo-star{
+    width: 300px;
+    height: 300px;
+    right:-1200px;
+}
+footer .container
+{
+    flex-direction: column;
+    text-align: center;
+}
+footer{
+    border-radius: none;
+    border: none;
+    text-align: center;
+}
+
+footer img{
+    width: 300px;
+}
+}
+
+
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align-last: left;
+
+}
+
+footer{
+    border: 3px double var(--main);
+    margin: 20px;
+    border-radius: 30px 30px  0 0;
+}
+
+.up {
+    background-color: var(--main);
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 20%;
+    position: fixed;
+    bottom: -100px; /* مخفي تحت */
+    right: 20px;
+    box-shadow: 0px 0px 20px 10px #00000094;
+    cursor: pointer;
+    transition:0.2s;
+    z-index: 999999999;
+    font-size: 35px;
+    opacity: 0;
+}
+
+/* عند إضافة كلاس "show" يرجع الزرار لمكانه ويظهر */
+.up.show {
+    bottom: 20px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* تأثير الهوفر */
+.up:hover {
+    background-color: #8a5a03;
+    transform: scale(1.1);
+}
+
+#img .container .box {
+    margin: 20px;
+    padding: 20px;
+    border: 3px dashed var(--main);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* زودت الارتفاع عشان الصور تكون أكبر */
+    box-shadow: 0 0 20px var(--main);
+    transition: 0.2s;
+}
+
+#img .container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يخلي الصورة تملى المساحة بدون تشوه */
+}
+
+#img .container .box:hover{
+    box-shadow: 0 0 30px #ff1515;
+}
+#home .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+    </style>
+</head>
+
+
+<body dir="rtl">
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/drawing.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">من أنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#img">معرض الصور</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">مهاراتي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">مشاريعي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#friends">أصدقائي</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start #home -->
+    <section id="home">
+        <div class="container">
+            <div class="txt">
+                <h1 class="text-effect">أهلاً بكم في موقع</h1>
+                <div class="img">
+                    <img src="./img/drawing.png" class="img-fluid" alt="">
+                </div>
+                <h1 class="text-effect">من احد اشهر المنظمات الرياضية</h1>
+                <a href="#" class="btn">اشترك الان في المسابقه</a>
+            </div>
+            <div class="icons">
+                <a href='https://www.youtube.com/@JOE675_nawawy' target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href='https://www.youtube.com/@JOE675_nawawy' target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                <a href='https://www.youtube.com/@JOE675_nawawy' target="_blank"><i class="fa-brands fa-playstation"></i></a>
+                <a href='https://www.youtube.com/@JOE675_nawawy' target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- End #home -->
+
+
+    <!-- Start #about -->
+
+    <section id="about">
+        <div class="container">
+            <hr><br><br>
+            <h1 class="title">من نحن</h1>
+            <div class="txt">
+                <div class="text">
+                    <p class="text-white-50">منظمة النجوم الرياضية هي مؤسسة تهدف إلى دعم وتطوير الرياضة واكتشاف المواهب الشابة. تقدم المنظمة برامج تدريبية، وتنظم بطولات ومسابقات في مختلف الألعاب الرياضية، كما توفر الدعم اللازم للرياضيين من خلال التدريب والتوجيه. تسعى المنظمة إلى نشر الثقافة الرياضية وتعزيز اللياقة البدنية في المجتمع، مع بناء شراكات مع الأندية والجهات الرياضية لتوفير فرص أكبر للرياضيين الطموحين. يمكن لأي شخص مهتم بالرياضة الانضمام والمشاركة في أنشطتها المختلفة لتطوير مهاراته وتحقيق إنجازات رياضية.</p>
+                </div>
+                <div class="img">
+                    <img src="yossef (1)/GridArt_٢٠٢٤٠٦٢٠_٢٠٠٦٥٨٥٤٩.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #about -->
+
+
+
+
+
+    <!-- Start #projects -->
+
+    <section id="projects">
+        <div class="container">
+            <br><br><br><br><br><hr><br><br>
+            <h1 class="title">للتواصل</h1>
+            <div class="txt">
+                <div class="row">
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 101743.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>رقم الهاتف</h3>
+                                <p class="btn">0215034608</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-sm-12">
+                        <div class="box">
+                            <div class="img">
+                                <img src="Screenshot 2025-02-13 101605.png" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>الايميل</h3>
+                                <p class="btn">maged685@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End #projects -->
+
+
+
+
+
+
+    <!-- Start #footer -->
+     <footer class=" p-2">
+        <div class="container">
+            <img src="yossef (1)/تصميم بدون عنوان.png" alt="">
+            <div class="text">
+                <h6>شكرا لكم علي زيارة موقعي 😁😁</h6>
+                <h6>سلاااااااااام</h6>
+                <br><br>
+                <h6>جميع الحقوق المحغوظه &copy; <a href="index.html" style="color: var(--main);     font-family: 'Rubik Glitch', serif; text-decoration: none;">JOE</a></h6>
+            </div>
+        </div>
+          
+    </footer>
+
+    <!-- End #footer -->
+
+
+
+    <button class="up">
+        <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener("scroll", function () {
+    let upButton = document.querySelector(".up");
+
+    if (window.scrollY > 400) { // لما ينزل تحت 300px يظهر الزرار
+        upButton.classList.add("show");
+    } else {
+        upButton.classList.remove("show");
+    }
+});
+
+// كود لجعل الزرار يطلع لفوق عند الضغط عليه
+document.querySelector(".up").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // حركة انسيابية عند الصعود
+    });
+});
+
+    </script>
+</body>
+</html>
